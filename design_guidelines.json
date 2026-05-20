@@ -1,0 +1,78 @@
+{
+  "theme": "Light",
+  "archetype": "4 (Swiss & High-Contrast)",
+  "color_palette": {
+    "background": "#FFFFFF",
+    "foreground": "#0F3D2E",
+    "primary": "#0F3D2E",
+    "secondary": "#E5EBE9",
+    "accent": "#09291E",
+    "muted": "#F2F5F4"
+  },
+  "typography": {
+    "headings": {
+      "family": "Cabinet Grotesk, sans-serif",
+      "import_url": "https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,400,100,900,300,500,700,200&display=swap",
+      "classes": "font-['Cabinet_Grotesk'] font-black tracking-tighter text-[#0F3D2E]"
+    },
+    "body": {
+      "family": "Satoshi, sans-serif",
+      "import_url": "https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap",
+      "classes": "font-['Satoshi'] font-normal leading-relaxed text-[#0F3D2E]"
+    }
+  },
+  "layout_spacing": {
+    "grid": "Swiss Grid (MODE A: THE 'TETRIS' GRID) with strict asymmetry.",
+    "spacing_scale": "Generous: p-8, p-12, p-24, py-32"
+  },
+  "sections": [
+    {
+      "name": "Navigation",
+      "design": "Sticky Header with Crystal Glassmorphism (bg-white/80 backdrop-blur-xl border-b border-[#E5EBE9]). Asymmetric alignment: Brand 'DATAWEB' on the left (font-black), navigation links on the right."
+    },
+    {
+      "name": "Hero",
+      "design": "Typography-led. Massive left-aligned 'DATAWEB' at text-5xl md:text-6xl, tracking-tighter, leading-none. Minimalist tagline ('Server & Email Management • User Helpdesk • Full Stack Development') right-aligned below it or indented heavily to create tension. Deep forest green text on stark white."
+    },
+    {
+      "name": "Services",
+      "design": "Asymmetrical 3-column grid (bento/tetris approach). Service 1 (Server & Email) spans 2 columns, others span 1. Grid Borders strategy: 1px solid #E5EBE9 separating the items for a technical, precise feel. Internal padding p-8 to p-12. Deep green text."
+    },
+    {
+      "name": "About",
+      "design": "High-contrast layout with generous whitespace. Small overline label (uppercase, tracking-[0.2em] text-xs) paired with a large statement text. Paragraph indented to the right side (md:w-1/2 ml-auto) to maintain asymmetry."
+    },
+    {
+      "name": "Contact",
+      "design": "Footer acts as the Contact section. Massive 'LET'S TALK' text at text-[10vw] (exception for footer typography scale). Static email link with hover underline. Background flips to deep green (#0F3D2E) with white (#FFFFFF) text to end with high contrast impact."
+    }
+  ],
+  "components": {
+    "buttons": "Sharp edges (rounded-none). Primary: bg-[#0F3D2E] text-white hover:bg-[#09291E] hover:text-white. Secondary: bg-transparent border border-[#0F3D2E] text-[#0F3D2E] hover:bg-[#F2F5F4].",
+    "cards": "Cardless or Grid Borders surface strategy. Avoid floating drop shadows; rely on 1px solid borders for definition.",
+    "links": "Underline on hover using transition-all duration-300."
+  },
+  "motion": {
+    "scroll": "MANDATORY: Lenis for smooth momentum scrolling.",
+    "hover": "Minimalist micro-interactions: slight color shifts, underline reveals.",
+    "entrance": "Staggered fade-up for grid items using framer-motion."
+  },
+  "media": {
+    "image_urls": [],
+    "notes": "No images provided or required. The design relies entirely on typography, spacing, and CSS shapes/borders."
+  },
+  "icons": {
+    "library": "lucide-react",
+    "usage": "Use sparingly. Minimalist geometric icons only (e.g., ArrowRight, Server, Code, Headphones)."
+  },
+  "instructions_to_main_agent": [
+    "Implement Fontshare imports in index.html or global css.",
+    "Configure tailwind.config.js to include the custom colors (forest green: #0F3D2E) and fonts.",
+    "Use pure HTML + Tailwind for structural layouts (do not use generic Shadcn layout components like Card if it restricts asymmetry).",
+    "Apply 'data-testid' attributes to all interactive elements (e.g., data-testid='contact-email-link', data-testid='nav-services-link').",
+    "Implement @studio-freight/react-lenis for smooth scrolling.",
+    "Ensure strictly white (#FFFFFF) background and dark green (#0F3D2E) foreground.",
+    "Never use purple, violet, teal blue, or generic SaaS blue.",
+    "Respect max heading sizes: H1 max is text-6xl (except in the footer where decorative text-[10vw] is allowed)."
+  ]
+}
